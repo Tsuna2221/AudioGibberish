@@ -1,0 +1,159 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvypjagkiqll0"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_tih5x"]
+[ext_resource type="Script" path="res://src/play_button.gd" id="2_fjq5e"]
+[ext_resource type="Script" path="res://src/next_button.gd" id="2_rhjjh"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tih5x")
+
+[node name="SpeechInput" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="TextEdit" parent="SpeechInput"]
+offset_left = 16.0
+offset_top = 863.0
+offset_right = 1832.0
+offset_bottom = 1048.0
+
+[node name="PlayButton" type="Button" parent="SpeechInput"]
+offset_left = 1832.0
+offset_top = 952.0
+offset_right = 1904.0
+offset_bottom = 1047.0
+text = "Play"
+script = ExtResource("2_fjq5e")
+
+[node name="NextButton" type="Button" parent="SpeechInput"]
+layout_mode = 0
+offset_left = 1832.0
+offset_top = 864.0
+offset_right = 1904.0
+offset_bottom = 952.0
+text = "Next"
+script = ExtResource("2_rhjjh")
+
+[node name="Options" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LetterTime" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 784.0
+offset_right = 128.0
+offset_bottom = 807.0
+text = "Letter Interval"
+
+[node name="Label" type="LineEdit" parent="Options/LetterTime"]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 128.0
+offset_bottom = 71.0
+text = "0.03"
+
+[node name="SpaceTime" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 624.0
+offset_right = 144.0
+offset_bottom = 647.0
+text = "Space Interval"
+
+[node name="Label" type="LineEdit" parent="Options/SpaceTime"]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 128.0
+offset_bottom = 71.0
+text = "0.06"
+
+[node name="PunctuationTime" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 704.0
+offset_right = 175.0
+offset_bottom = 727.0
+text = "Punctuation Interval"
+
+[node name="Label" type="LineEdit" parent="Options/PunctuationTime"]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 128.0
+offset_bottom = 71.0
+text = "0.3"
+
+[node name="Pitch" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MinPitch" type="Label" parent="Pitch"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 336.0
+offset_right = 56.0
+offset_bottom = 385.0
+text = "Pitch
+Min"
+
+[node name="Input" type="LineEdit" parent="Pitch/MinPitch"]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 67.0625
+offset_bottom = 100.0
+text = "-0.2"
+
+[node name="MaxPitch" type="Label" parent="Pitch"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 362.0
+offset_right = 127.0
+offset_bottom = 385.0
+text = "Max
+"
+
+[node name="Input" type="LineEdit" parent="Pitch/MaxPitch"]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 67.0625
+offset_bottom = 74.0
+text = "0.2"
+
+[node name="EmphasisPitch" type="Label" parent="Pitch"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 448.0
+offset_right = 133.0
+offset_bottom = 471.0
+text = "Emphasis Pitch"
+
+[node name="Input" type="LineEdit" parent="Pitch/EmphasisPitch"]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 67.0625
+offset_bottom = 75.0
+text = "0.2"
+
+[node name="EmphasisLetter" type="Label" parent="Pitch"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 536.0
+offset_right = 255.0
+offset_bottom = 559.0
+text = "Emphasis Letter (Separate by ,)"
+
+[node name="Input" type="LineEdit" parent="Pitch/EmphasisLetter"]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 432.0
+offset_bottom = 74.0
+text = "a,e,i,o,u"
+
+[connection signal="button_down" from="SpeechInput/PlayButton" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="SpeechInput/NextButton" to="." method="_on_next_button_button_down"]

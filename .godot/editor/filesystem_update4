@@ -1,0 +1,7 @@
+res://src/main.tscn
+res://src/text_box.tscn
+res://src/scripts/text_box.gd
+res://src/scripts/DialogManager.gd
+res://node_2d.gd
+res://src/next_button.gd
+res://src/play_button.gd

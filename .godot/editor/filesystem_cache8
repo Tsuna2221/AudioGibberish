@@ -1,0 +1,21 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1730597224
+audio.wav::AudioStreamWAV::1933062813103135852::1730592382::1730597225::1::::<><>::
+export_presets.cfg::TextFile::-1::1730596710::0::1::::<><>::
+icon.svg::CompressedTexture2D::3686364908873839485::1730586185::1730586203::1::::<><>::
+node_2d.gd::GDScript::-1::1730597155::0::1::::<>Node2D<>::
+::res://src/::1730597155
+box.png::CompressedTexture2D::5231009490029700878::1730587094::1730587097::1::::<><>::
+main.tscn::PackedScene::3910858302960370171::1730597155::0::1::::<><>::res://node_2d.gd<>res://src/next_button.gd
+next_button.gd::GDScript::-1::1730596352::0::1::::<>Button<>::
+text_box.tscn::PackedScene::4090302429831634094::1730597155::0::1::::<><>::uid://cgr67yebw3m1k::::res://src/box.png<>res://src/scripts/text_box.gd
+::res://src/beeps/::1730592463
+beep-03.wav::AudioStreamWAV::4340528926901592634::1730591496::1730591550::1::::<><>::
+button-3.wav::AudioStreamWAV::6166220206078881287::1730591522::1730591550::1::::<><>::
+button-10.wav::AudioStreamWAV::1979510486051703120::1730591536::1730591550::1::::<><>::
+NOOT 1.wav::AudioStreamWAV::2926182700658907930::1730592373::1730592463::1::::<><>::
+NOOT 2.wav::AudioStreamWAV::5680844429071377299::1730592378::1730592386::1::::<><>::
+NOOT 3.wav::AudioStreamWAV::2284409566852960059::1730592382::1730592386::1::::<><>::
+::res://src/scripts/::1730597050
+DialogManager.gd::GDScript::-1::1730597050::0::1::::<>Node<>::
+text_box.gd::GDScript::-1::1730592086::0::1::::<>MarginContainer<>::
